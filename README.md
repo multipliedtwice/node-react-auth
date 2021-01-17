@@ -1,4 +1,4 @@
-# Node Auth
+# Node Auth React
 
 Example react + node authentication app with jwt
 
