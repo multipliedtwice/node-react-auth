@@ -1,0 +1,29 @@
+{
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules/", "src/**/*.test.ts", "src/**/*.ignore.ts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@config": ["config/index.ts"],
+      "@common-types": ["types/index.ts"],
+      "@helpers": ["helpers/index.ts"]
+    },
+    "outDir": "dist/",
+    "lib": ["esnext", "dom"],
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": false,
+    "inlineSources": true,
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true
+  }
+}

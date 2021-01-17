@@ -1,0 +1,11 @@
+.toggle__dot {
+  top: -0.1rem;
+  left: 0.3rem;
+  transition: all 0.3s linear;
+  background: #d1d5db;
+}
+
+.toggle:checked ~ .toggle__dot {
+  transform: translateX(1.9rem);
+  background: #3b82f6;
+}
