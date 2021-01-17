@@ -37,7 +37,7 @@ const useNewPassword: NewPasswordFunction = () => {
           password,
           repeat_password,
           ...(language && language != 'undefined'
-            ? { language: language?.substring(0, 2) }
+            ? { language }
             : { language: 'en' }),
         },
       },
