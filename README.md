@@ -5,7 +5,7 @@ Example react + node authentication app with jwt
 # Installation
 
 1. git clone https://github.com/thousandsofraccoons/node-react-auth
-2. cd node-auth
+2. cd node-react-auth
 3. Create a `.env` file in the server directory with this content
 
 ```
