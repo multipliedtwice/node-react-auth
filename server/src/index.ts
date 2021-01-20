@@ -7,16 +7,21 @@ import morgan from 'morgan'
 import { auth } from './auth'
 import helmet from 'helmet'
 import debug from 'debug'
+import hpp from 'hpp'
+import contentLength from 'express-content-length-validator'
+
 const info = debug('info')
+const MAX_CONTENT_LENGTH_ACCEPTED = 9999
 
 const app = express()
 connectDB()
 
-app.use(morgan('combined', { stream: { write: (msg) => info(msg) } }))
 app.use(cors())
+app.use(contentLength.validateMax({ max: MAX_CONTENT_LENGTH_ACCEPTED }))
+app.use(hpp())
 app.use(helmet())
-app.disable('x-powered-by')
 
+app.use(morgan('combined', { stream: { write: (msg) => info(msg) } }))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
